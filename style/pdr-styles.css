@@ -1,0 +1,606 @@
+/* ══════════════════════════════════════════════════════════════
+   §1 · FUENTES
+══════════════════════════════════════════════════════════════ */
+
+@font-face {
+  font-family: GoudyMediaeval;
+  src: url('fonts/GoudyMediaeval-DemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: GoudyMediaeval;
+  src: url('fonts/GoudyMediaeval-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: EBGaramond;
+    src: url("fonts/EBGaramond-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: EBGaramond;
+    src: url("fonts/EBGaramond-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: EBGaramond;
+    src: url("fonts/EBGaramond-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: EBGaramond;
+    src: url("fonts/EBGaramond-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: EBGaramond;
+    src: url("fonts/EBGaramond-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   §2 · OVERRIDE DE VARIABLES CSS DE FOUNDRY v13
+══════════════════════════════════════════════════════════════ */
+
+.actor-v2,
+.item-v2,
+.character,
+.equippableItem,
+.custom-dialog {
+    --color-text-primary    : #0d0d0d;
+    --color-text-hyperlink  : #0d0d0d;
+    --color-shadow-primary  : rgba(13, 13, 13, 0.4);
+    color: #0d0d0d;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   §3 · FONDO PERGAMINO + PARCA
+══════════════════════════════════════════════════════════════ */
+
+.actor-v2 .window-content,
+.character .window-content,
+.equippableItem .window-content,
+.item-v2 .window-content,
+.custom-dialog .window-content {
+    background-image:
+        url("assets/parca-marca-agua.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto, 100% 100%;
+    background-position: center center, center bottom;
+    color: #0d0d0d;
+}
+
+.actor-v2 .window-content form,
+.character .window-content form,
+.equippableItem .window-content form,
+.item-v2 .window-content form,
+.custom-dialog .window-content form {
+    background: transparent;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   §4 · TIPOGRAFÍA BASE
+══════════════════════════════════════════════════════════════ */
+
+.actor-v2 .window-content,
+.character .window-content,
+.item-v2 .window-content,
+.equippableItem .window-content,
+.custom-dialog .window-content {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 16px;
+    color: #0d0d0d;
+}
+
+/* Todos los <a> y caption */
+.actor-v2 a,
+.actor-v2 caption,
+.character a,
+.character caption,
+.item-v2 a,
+.item-v2 caption,
+.equippableItem a,
+.equippableItem caption,
+.custom-dialog a,
+.custom-dialog caption {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 18px;
+    color: #0d0d0d;
+}
+
+/* h3 de paneles colapsables */
+.actor-v2 h3,
+.character h3,
+.item-v2 h3,
+.equippableItem h3,
+.custom-dialog h3 {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 14px;
+    padding: 0px;
+    color: #0d0d0d;
+}
+.actor-v2 h3 div,
+.character h3 div,
+.item-v2 h3 div,
+.equippableItem h3 div,
+.custom-dialog h3 div {
+    padding: 0px;
+}
+
+/* Grids */
+.actor-v2 .grid,
+.character .grid {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Inputs */
+.actor-v2 input[type=text],
+.actor-v2 input[type=number],
+.character input[type=text],
+.character input[type=number],
+.item-v2 input[type=text],
+.item-v2 input[type=number],
+.equippableItem input[type=text],
+.equippableItem input[type=number],
+.custom-dialog input[type=text],
+.custom-dialog input[type=number] {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 16px;
+    box-shadow: 0px 0px;
+    background: transparent;
+    border-color: #0d0d0d;
+    border-width: 0px 0px 1px 0px;
+    border-radius: 0px;
+    color: #0d0d0d;
+}
+
+/* Selects */
+.actor-v2 select,
+.character select,
+.item-v2 select,
+.equippableItem select,
+.custom-dialog select {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 16px;
+    background: transparent;
+    border-color: #0d0d0d;
+    border-width: 0px 0px 1px 0px;
+    border-radius: 0px;
+    color: #0d0d0d;
+}
+
+/* Flecha de paneles colapsables (summary) */
+.actor-v2 .custom-system-panel summary:before,
+.character .custom-system-panel summary:before,
+.item-v2 .custom-system-panel summary:before,
+.equippableItem .custom-system-panel summary:before,
+.custom-dialog .custom-system-panel summary:before {
+    border-color: transparent transparent transparent #0d0d0d;
+}
+
+/* Tablas */
+.actor-v2 table,
+.character table,
+.item-v2 table,
+.equippableItem table,
+.custom-dialog table {
+    background: transparent;
+    border: 1px;
+    box-shadow: none;
+    color: #0d0d0d;
+}
+.actor-v2 table tr,
+.actor-v2 table td,
+.actor-v2 table th,
+.character table tr,
+.character table td,
+.character table th {
+    border: none;
+    background: transparent;
+    color: #0d0d0d;
+}
+
+/* Links de contenido */
+.actor-v2 .content-link,
+.character .content-link,
+.item-v2 .content-link,
+.equippableItem .content-link,
+.custom-dialog .content-link {
+    background: transparent;
+    color: #0d0d0d;
+    border: 0px;
+}
+
+/* Botones de control numérico */
+.custom-system-number-field-control {
+    background: transparent;
+    color: #0d0d0d;
+    border: 1px solid #0d0d0d;
+}
+
+/* Botones */
+.custom-system-user-inputs td button,
+.custom-system-label-root.button {
+    width: 120px;
+    height: 40px;
+    color: #0d0d0d;
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 15px;
+
+    background-image: url("assets/boton-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    transition:
+        filter 0.18s ease,
+        transform 0.12s ease,
+        box-shadow 0.18s ease,
+        text-shadow 0.18s ease,
+        background-size 0.18s ease;
+}
+
+/* Hover */
+.custom-system-user-inputs td button:hover,
+.custom-system-label-root.button:hover {
+    background-image:
+        url("assets/sangre-4.png"),
+        url("assets/boton-1.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: 72% 72%, 100% 100%;
+
+    filter: brightness(1.00) saturate(1.00) contrast(1.00);
+    transform: translateY(-1px) scale(1.03);
+    box-shadow:
+        0 0 6px rgba(0, 0, 0, 0.28),
+        0 0 14px rgba(90, 20, 10, 0.22);
+    text-shadow: 0 0 3px rgba(255, 245, 220, 0.75);
+}
+
+/* Active */
+.custom-system-user-inputs td button:active,
+.custom-system-label-root.button:active {
+    background-image:
+        url("assets/sangre-5.png"),
+        url("assets/boton-1.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: 84% 84%, 100% 100%;
+
+    filter: brightness(0.95) contrast(1.00);
+    transform: scale(0.98);
+    box-shadow:
+        0 0 3px rgba(0, 0, 0, 0.2),
+        0 0 8px rgba(90, 20, 10, 0.16);
+}
+
+
+/* Imagen del item en container */
+.custom-system-item-container-image {
+    display: none;
+}
+
+/* Rollable */
+.custom-system-rollable,
+.custom-system-rollable > * {
+    color: #3a1a0a;
+}
+
+.custom-system-label {
+    font-family: GoudyMediaeval;
+    font-size: 17px;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   §5 · CLASES PROPIAS DE PdR
+══════════════════════════════════════════════════════════════ */
+
+.pdr-lbl-seccion {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 14px;
+    color: #0d0d0d;
+}
+.pdr-lbl-campo {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 16px;
+    color: #0d0d0d;
+}
+.pdr-lbl-separador {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 13px;
+    color: #0d0d0d;
+}
+.pdr-btn,
+.pdr-btn-dano {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 15px;
+    color: #0d0d0d;
+}
+.pdr-val-habilidad,
+.pdr-val-salvacion,
+.pdr-val-salvacion-alt,
+.pdr-val-pesar,
+.pdr-val-fatiga,
+.pdr-val-salud,
+.pdr-val-heridas,
+.pdr-val-experiencia,
+.pdr-val-monedas,
+.pdr-val-movimiento,
+.pdr-val-nivel,
+.pdr-val-edad {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 16px;
+    color: #0d0d0d;
+}
+.pdr-txt-nombre,
+.pdr-txt-carrera,
+.pdr-txt-patron,
+.pdr-txt-trasfondo,
+.pdr-txt-cronica {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 16px;
+    color: #0d0d0d;
+    border: solid;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 2px;
+    border-color: #0d0d0d;
+}
+
+.pdr-items-atributos {
+    border: solid;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 2px;
+    border-color: #0d0d0d;
+}
+
+.pdr-items-combate {
+    border: solid;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 2px;
+    border-color: #0d0d0d;
+}
+
+.pdr-items-fe {
+    border: solid;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 2px;
+    border-color: #0d0d0d;
+}
+
+.pdr-panel-habilidades {
+    background-image:
+        url("assets/pergamino-fondo.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto, 100% 100%;
+    background-position: center center, center bottom;
+    color: #0d0d0d;
+}
+
+.pdr-panel-salvaciones {
+    background-image:
+        url("assets/pergamino-fondo.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto, 100% 100%;
+    background-position: center center, center bottom;
+    color: #0d0d0d;
+}
+
+/* Nombre del personaje */
+.charname {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 26px;
+    color: #0d0d0d;
+}
+.charname input[type="text"] {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 26px;
+    background: transparent;
+    border-width: 0px 0px 1px 0px;
+    border-radius: 0px;
+    color: #0d0d0d;
+}
+
+/* Nombre del item */
+.itemname {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 26px;
+    color: #0d0d0d;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   §6 · PESTAÑAS
+══════════════════════════════════════════════════════════════ */
+
+/* Barra de tabs principal (nav.custom-tabs de sheet-v2) */
+.actor-v2 nav.custom-tabs,
+.character nav.custom-tabs {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #707070;
+}
+.actor-v2 nav.custom-tabs a,
+.actor-v2 nav.custom-tabs a.item,
+.character nav.custom-tabs a,
+.character nav.custom-tabs a.item {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #707070;
+}
+.actor-v2 nav.custom-tabs a.active,
+.actor-v2 nav.custom-tabs a.item.active,
+.character nav.custom-tabs a.active,
+.character nav.custom-tabs a.item.active {
+    color: #0d0d0d;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+/* Tabs heredadas */
+.tabbedpanel nav {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #707070;
+}
+.tabbedpanel a.item {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 17px;
+    color: #707070;
+}
+.tabbedpanel a.item.active {
+    color: #0d0d0d;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+/* Barra sheet-tabs del actor (selector alternativo) */
+.custom-system-actor nav.sheet-tabs a,
+.custom-system-actor nav.sheet-tabs a.item {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #707070;
+}
+.custom-system-actor nav.sheet-tabs a.active,
+.custom-system-actor nav.sheet-tabs a.item.active {
+    color: #0d0d0d;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+.custom-system-field > label {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 17px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   §7 · CHAT
+══════════════════════════════════════════════════════════════ */
+
+#chat-log {
+    background-image: url("assets/pergamino-fondo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: local;
+}
+
+.chat-message {
+    background-image: url("assets/pergamino-fondo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: local;
+}
+
+.chat-message .message-content {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 16px;
+    background: transparent;
+    color: #0d0d0d;
+}
+
+.chat-message .message-header .message-sender {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #0d0d0d;
+    white-space: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.chat-message .message-content h1 {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    border: 0px;
+}
+.chat-message .message-content div {
+    background: transparent;
+    border: 0px;
+}
+.chat-message .message-content h2 {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border: 0px;
+}
+.chat-message .message-content p {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 16px;
+}
+.chat-message .message-content b {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 18px;
+}
+.chat-message .dice-total {
+    font-family: GoudyMediaeval, Georgia, serif;
+    font-size: 22px;
+}
+.custom-system-roll {
+    border: 0px;
+    background: transparent;
+}
+.custom-system-roll i {
+    display: none;
+}
+.message .message-header .message-metadata {
+    flex: 0 0 50px;
+    margin-left: 0;
+}
+.message-timestamp {
+    font-family: EBGaramond, Georgia, serif;
+    font-size: 10px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   §8 · ANCHO PREDETERMINADO DE LA HOJA DE PERSONAJE
+══════════════════════════════════════════════════════════════ */
+.window-app.actor.sheet,
+.application.actor.sheet {
+  min-width: 700px ;
+}
+
+.actor-v2 .custom-system-actor-content > header.sheet-header {
+  display: flex ;
+  align-items: flex-start ;
+  gap: 12px ;
+}
+
+.actor-v2 .custom-system-actor-content > header.sheet-header > .profile-img-container {
+  width: 150px ;
+  height: 150px ;
+  min-width: 150px ;
+  min-height: 150px ;
+  max-width: 150px ;
+  max-height: 150px ;
+  flex: 0 0 150px ;
+}
+
+.actor-v2 .custom-system-actor-content > header.sheet-header > .profile-img-container img {
+  width: 100% ;
+  height: 100% ;
+  display: block ;
+  object-fit: contain ;
+}
+
+.actor-v2 .custom-system-actor-content > header.sheet-header > .header-fields {
+  flex: 1 1 auto ;
+  min-width: 0 ;
+  width: auto ;
+  margin-left: 0 ;
+}
