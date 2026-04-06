@@ -1,0 +1,45 @@
+{
+  "id": "peregrinos-de-la-ruina",
+  "title": "Peregrinos de la Ruina",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "description": "<p>Módulo para que puedas jugar el sistema Peregrinos de la Ruina. Para ello tienes que usar Custom Sistem builder</p>",
+  "authors": [
+    {
+      "name": "Ellyjah",
+      "flags": {}
+    }
+  ],
+    "styles": [
+    "style/pdr-styles.css"
+  ],
+  "flags": {
+    "canUpload": true
+  },
+  "packs": [
+    {
+      "name": "peregrinos-1",
+      "label": "Peregrinos",
+      "path": "packs/peregrinos-1",
+      "type": "Adventure",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "custom-system-builder",
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "recommends": [
+      {
+        "id": "dice-so-nice",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  }
+}
